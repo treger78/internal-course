@@ -1,0 +1,19 @@
+{
+  "name": "02-unit-testing",
+  "version": "0.1.0",
+  "description": "Unit testing task",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "test",
+    "jest",
+    "unit-testing"
+  ],
+  "author": "Ilia Pustograev",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
