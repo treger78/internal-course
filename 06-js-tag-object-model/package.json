@@ -1,0 +1,19 @@
+{
+  "name": "06-js-tag-object-model",
+  "version": "0.1.0",
+  "description": "tag-object-model",
+  "main": "tag-object-model.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "js",
+    "regexp",
+    "tag-object-model"
+  ],
+  "author": "Ilia Pustograev",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
