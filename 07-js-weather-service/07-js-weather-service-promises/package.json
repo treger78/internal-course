@@ -1,0 +1,11 @@
+{
+  "name": "07-js-weather-service-promises",
+  "version": "0.1.0",
+  "description": "weather-server-on-promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ilia Pustograev",
+  "license": "ISC"
+}

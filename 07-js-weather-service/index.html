@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>Weather service</title>
+  </head>
+  <body>
+    <div id="root">
+      <main>
+        <div class="citiesList">
+          <label>Посмотреть список доступных городов для прогноза</label>
+          <button class="citiesListBtn">Посмотреть</button>
+        </div>
+
+        <div class="weatherForecast">
+          <label>Посмотреть среднюю температуру</label>
+          <input
+            class="city"
+            type="text"
+            placeholder="Город"
+            autocomplete="off"
+          />
+          <input
+            class="day"
+            type="text"
+            placeholder="День года (от 1 до 365)"
+            autocomplete="off"
+          />
+          <button class="weatherForecastBtn">Посмотреть</button>
+          <button class="resetBtn">Очистить</button>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script type="module" src="./scripts/index.js"></script>
+</html>

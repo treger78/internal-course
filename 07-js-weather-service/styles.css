@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+div {
+  padding: 1rem;
+}
+
+.citiesList, .weatherForecast {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+div>* {
+  margin: 0.5rem;
+}
