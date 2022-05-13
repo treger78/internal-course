@@ -6,6 +6,9 @@ export class Zombie {
 
   createZombie(positionID) {
     const zombiePosition = document.getElementById(positionID);
+
+    if (!zombiePosition) return;
+
     zombiePosition.style.display = 'flex';
     zombiePosition.style.justifyContent = 'center';
     zombiePosition.classList.add('zombie');
@@ -37,6 +40,8 @@ export class Zombie {
     // т. к. прошлый элемент автоматически удаляется при удалении класса 'zombie' у html-элемента.
     while (zombies.length !== 0) {
       const zombie = zombies[0];
+
+      if (!zombie) return;
 
       zombiesNewPositions.push(zombie.id - CONSTS.BOARD_WIDTH);
 
