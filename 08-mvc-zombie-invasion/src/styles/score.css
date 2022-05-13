@@ -1,0 +1,10 @@
+#score {
+  border: 2px solid black;
+  width: 10vw;
+  height: 5vh;
+  margin-top: 3vh;
+  font-size: 14pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

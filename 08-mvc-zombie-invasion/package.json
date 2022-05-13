@@ -1,0 +1,22 @@
+{
+  "name": "08-mvc-zombie-invasion",
+  "version": "0.1.0",
+  "description": "zomvie-invasion game on mvc",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "zombie",
+    "game",
+    "mvc",
+    "js",
+    "web-game",
+    "browser-game"
+  ],
+  "author": "Ilia Pustograev",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

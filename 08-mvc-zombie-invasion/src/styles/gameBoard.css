@@ -1,0 +1,14 @@
+#gameBoard {
+  margin: 5vh;
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+}
+
+.rowItem {
+  border: 1px solid black;
+  width: 10vw;
+  height: 5vh;
+}
