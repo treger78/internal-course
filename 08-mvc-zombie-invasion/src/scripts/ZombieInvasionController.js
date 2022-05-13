@@ -9,7 +9,7 @@ export class ZombieInvasionController {
 
     this.zombieInvasion = this.startZombieInvasion();
 
-    this.gameOver = this.checkGameOver();
+    this.isGameOver = false;
   }
 
   startZombieInvasion() {
@@ -19,13 +19,15 @@ export class ZombieInvasionController {
       if (this.lastInvasionSpeed > currentInvasionSpeed) {
         clearInterval(this.zombieInvasion);
         clearInterval(invasion);
-        clearInterval(this.gameOver);
 
         this.zombieInvasion = this.startZombieInvasion();
-        this.gameOver = this.checkGameOver();
 
         this.lastInvasionSpeed = currentInvasionSpeed;
       }
+
+      this.checkGameOver();
+
+      if (this.isGameOver) return;
 
       this.model.moveZombies();
       this.model.emit('renderZombie', this.model.createZombies());
@@ -35,26 +37,23 @@ export class ZombieInvasionController {
   }
 
   checkGameOver() {
-    const check = setInterval(() => {
-      const zombies = document.getElementsByClassName('zombie');
+    const zombies = document.getElementsByClassName('zombie');
 
-      for (let i = 0; i < zombies.length; i += 1) {
-        const isGameOver =
-          Number(zombies[i].id) >= Number(CONSTS.RIGHT_BOARD_WALL) &&
-          Number(zombies[i].id) <= Number(CONSTS.LEFT_BOARD_WALL);
+    for (let i = 0; i < zombies.length; i += 1) {
+      this.isGameOver =
+        Number(zombies[i].id) >= Number(CONSTS.RIGHT_BOARD_WALL) &&
+        Number(zombies[i].id) <= Number(CONSTS.LEFT_BOARD_WALL);
 
-        if (isGameOver) {
-          clearInterval(this.zombieInvasion);
-          clearInterval(check);
+      if (this.isGameOver) {
+        clearInterval(this.zombieInvasion);
 
-          const player = document.getElementsByClassName('player')[0];
+        const player = document.getElementsByClassName('player')[0];
 
-          player.firstChild.remove();
-          player.classList.remove('player');
+        player.firstChild.remove();
+        player.classList.remove('player');
 
-          return alert('Game over!');
-        }
+        return alert('Game over!');
       }
-    }, this.model.currentInvasionSpeed);
+    }
   }
 }
